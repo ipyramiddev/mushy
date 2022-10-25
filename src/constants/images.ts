@@ -1,5 +1,6 @@
 import { ActiveOffer } from '../types';
-export const IMAGE_KIT_ENDPOINT_URL = 'https://ik.imagekit.io/srjnqnjbpn9/';
+export const IMAGE_KIT_ENDPOINT_OLDURL = 'https://ik.imagekit.io/srjnqnjbpn9/';
+export const IMAGE_KIT_ENDPOINT_URL = 'https://ik.imagekit.io/7mz6fngfss/';
 
 export const isArweaveImage = (fullImageUrl: string) => fullImageUrl.includes('arweave');
 export const isSolarianImage = (fullImageUrl: string) => fullImageUrl.includes('solarian');

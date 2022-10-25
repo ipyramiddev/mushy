@@ -11,7 +11,7 @@ import { useHistory } from "react-router-dom";
 import { IKImage } from "imagekitio-react";
 import { useContext, useState } from "react";
 import * as ROUTES from "../../constants/routes";
-import { getImagePath, IMAGE_KIT_ENDPOINT_URL, isImageInCache } from "../../constants/images";
+import { getImagePath, IMAGE_KIT_ENDPOINT_OLDURL, isImageInCache } from "../../constants/images";
 import { ActiveOffer } from "../../types";
 import { getTraitValueByKey, isSolarian, handlerFavorites, itemIsFavorite } from "../../utils";
 import { useTooltipState, Tooltip, TooltipArrow, TooltipReference } from "reakit/Tooltip";
@@ -76,7 +76,7 @@ const anonDisplay : string | undefined = offer.solo? `Anon${shortenAddress(offer
         <div className="col-span-2 w-full">
           {offer?.metadata?.image && isImageInCache(offer.metadata.image) && !cacheFailed ? (
             <IKImage
-              urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+              urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
               path={getImagePath(offer.metadata?.image)}
               transformation={[
                 {

@@ -1,7 +1,7 @@
 //@ts-ignore
 import { IKImage } from "imagekitio-react";
 import { useState } from "react";
-import { IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL } from "../../constants/images";
 import "../ShimmeringImage/styles.css";
 
 interface CollectionThumbnailProps {
@@ -47,7 +47,7 @@ export const CollectionThumbnail = ({
         />
       ) : (
         <IKImage
-          urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+          urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
           path={thumbnail}
           transformation={ikImageTransformation}
           alt={name + "logo"}

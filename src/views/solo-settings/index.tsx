@@ -2,7 +2,7 @@ import { useWallet as useWallet0 } from "../../contexts/wallet";
 import { useContext, useEffect, useState } from "react";
 // @ts-ignore
 import { IKImage } from "imagekitio-react";
-import { IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL } from "../../constants/images";
 import { Page } from "../../components/Page";
 import { SoloCreateProgressBar } from "../../components/SoloCreateProgressBar";
 import { ProfileData, SoloCreateStepper } from "../../components/SoloCreateStepper";
@@ -94,7 +94,7 @@ export const SoloSettingsView = () => {
       {!wallet?.publicKey && userAuth && (
         <div className="max-w-5xl mx-4 mt-20 sm:mx-6 lg:mx-auto relative py-10 px-7">
           <IKImage
-            urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+            urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
             path="/logo/digitaleyes-cant-find.gif"
             alt="digital eyes cant find"
             className="w-auto h-12 absolute -top-5 mx-auto my-0 left-0 right-0"

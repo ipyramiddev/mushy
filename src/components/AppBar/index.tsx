@@ -9,7 +9,7 @@ import { ReactComponent as FullMoon } from "../../assets/icons/full-moon.svg";
 import { ReactComponent as DiscordLogo } from "../../assets/logo/discord.svg";
 import { ReactComponent as TwitterLogo } from "../../assets/logo/twitter.svg";
 import { ReactComponent as FeedbackLogo } from "../../assets/icons/feedback.svg";
-import { IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL, IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
 import { GET_SOLO_USER_NO_AUTH, GET_SOLO_USER_NO_AUTH_QUERY_PARAM } from "../../constants/urls";
 import * as ROUTES from "../../constants/routes";
 import { useCollections } from "../../contexts/collections";
@@ -60,13 +60,10 @@ export function AppBar() {
               <Link to={ROUTES.HOME} onClick={() => close()} className="flex items-center">
                 <IKImage
                   urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
-                  path="/logo/digitaleyes.svg"
-                  alt="digital eyes logo"
+                  path="/logo/mushy.svg"
+                  alt="mushy logo"
                   className="w-auto h-6 md:h-7.5"
                 />
-                <span className="text-white ml-2.5 font-medium text-xl hidden sm:block">
-                  DigitalEyes
-                </span>
               </Link>
             </div>
 
@@ -165,7 +162,7 @@ export function AppBar() {
                     <div>
                       <Link to={ROUTES.HOME} onClick={() => close()}>
                         <IKImage
-                          urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+                          urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
                           path="/logo/digitaleyes.svg"
                           alt="digital eyes logo"
                           className="h-12 w-auto"

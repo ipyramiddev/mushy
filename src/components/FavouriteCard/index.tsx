@@ -5,7 +5,7 @@ import { Collection } from "../../types";
 import * as ROUTES from "../../constants/routes";
 // @ts-ignore-next-line
 import { IKImage } from "imagekitio-react";
-import { IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL } from "../../constants/images";
 import { useEffect, useRef, useState } from "react";
 import { BASE_URL_OFFERS_RETRIEVER } from "../../constants/urls";
 import { CollectionMetadata } from "../../views/collections";

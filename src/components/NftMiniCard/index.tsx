@@ -3,7 +3,7 @@ import { IKImage } from 'imagekitio-react';
 import { ActiveOffer } from "../../types";
 import { ReactComponent as CheckShield } from "../../assets/icons/check-shield.svg";
 
-import { getImagePath, IMAGE_KIT_ENDPOINT_URL, isImageInCache, } from '../../constants/images';
+import { getImagePath, IMAGE_KIT_ENDPOINT_OLDURL, isImageInCache, } from '../../constants/images';
 
 export interface NftMiniCardProps {
   offer: ActiveOffer;
@@ -26,7 +26,7 @@ export const NftMiniCard: React.FC<NftMiniCardProps> = ({ offer, onClick }) => {
         </div>
       {offer.metadata?.image && isImageInCache(offer.metadata.image) ?
         <IKImage
-            urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+            urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
             path={getImagePath(offer.metadata?.image)}
             transformation={[{ quality: 10 }]}
             alt={offer.metadata?.name}

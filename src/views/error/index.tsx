@@ -2,14 +2,14 @@
 import { IKImage } from "imagekitio-react";
 import { ReactComponent as TwitterLogo } from "../../assets/logo/twitter.svg";
 import { Page } from "../../components/Page";
-import { IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL } from "../../constants/images";
 import { DE_DISCORD } from "../../utils/DeSocials";
 
 export const ErrorView = () => {
   return (
     <Page title="Something went wrong | DigitalEyes">
       <IKImage
-        urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+        urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
         path="/logo/digitaleyes.svg"
         alt="digital eyes logo"
         className="w-auto h-56 absolute opacity-5 left-1/4 top-5"

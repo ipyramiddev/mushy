@@ -12,7 +12,7 @@ import { IKImage } from "imagekitio-react";
 import LazyLoad from 'react-lazyload'; // tslint:disable-line:no-any variable-name
 import { useContext, useState } from "react";
 import * as ROUTES from "../../constants/routes";
-import { getImagePath, IMAGE_KIT_ENDPOINT_URL, isImageInCache } from "../../constants/images";
+import { getImagePath, IMAGE_KIT_ENDPOINT_OLDURL, isImageInCache } from "../../constants/images";
 import { ActiveOffer } from "../../types";
 import {
   getTraitValueByKey,

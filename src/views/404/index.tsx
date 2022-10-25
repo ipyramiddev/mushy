@@ -2,13 +2,13 @@
 import { IKImage } from "imagekitio-react";
 import { Page } from "../../components/Page";
 import { TopCollections } from "../../components/TopCollections";
-import { IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL } from "../../constants/images";
 
 export const NotFoundView = () => {
   return (
     <Page title="Not found | DigitalEyes">
       <IKImage
-        urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+        urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
         path="/logo/digitaleyes.svg"
         alt="digital eyes logo"
         className="w-auto h-56 absolute opacity-5 left-1/4 top-5"

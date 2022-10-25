@@ -1,4 +1,4 @@
-import { IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL } from "../../constants/images";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 // @ts-ignore
@@ -9,7 +9,7 @@ export const NsfwPopup = ({ goHomeNsfw, goToCollectionNsfw }: any) => {
     <div className="fixed top-1/7 sm:top-1/3 inset-x-0 pb-2 sm:pb-5 z-50">
       <div className="max-w-5xl mx-4 sm:mx-6 lg:mx-auto relative shadow-md py-10 px-7 bg-color-main-primary">
         <IKImage
-          urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+          urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
           path="/logo/digitaleyes-cant-find.gif"
           alt="digital eyes cant find"
           className="w-auto h-12 absolute -top-5 mx-auto my-0 left-0 right-0"

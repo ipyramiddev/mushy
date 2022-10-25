@@ -1,7 +1,7 @@
 // @ts-ignore-next-line
 import { IKImage } from "imagekitio-react";
 import { Link } from "react-router-dom";
-import { IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL } from "../../constants/images";
 import * as ROUTES from "../../constants/routes";
 import { useCollections } from "../../contexts/collections";
 import { Collection } from "../../types";

@@ -14,7 +14,7 @@ import { useCollections } from "../../contexts/collections";
 import { useConnection, useConnectionConfig } from "../../contexts/connection";
 import { ActiveOffer, Collection } from "../../types";
 import { classNames, findCollection, getEscrowContract } from "../../utils";
-import { IMAGE_KIT_ENDPOINT_URL, isImageInCache } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL, isImageInCache } from "../../constants/images";
 // @ts-ignore
 import { IKImage } from "imagekitio-react";
 import { ReactComponent as DiscordLogo } from "../../assets/logo/discord.svg";

@@ -16,7 +16,7 @@ import {
 } from "antd";
 //@ts-ignore
 import { IKImage } from "imagekitio-react";
-import { getImagePath, IMAGE_KIT_ENDPOINT_URL, isImageInCache } from "../../constants/images";
+import { getImagePath, IMAGE_KIT_ENDPOINT_OLDURL, isImageInCache } from "../../constants/images";
 import { GET_AUTHED_DETAILS } from "../../constants/urls";
 import * as ROUTES from "../../constants/routes";
 import Slider from "@mui/material/Slider";
@@ -411,7 +411,7 @@ export const ArtCreateView = () => {
       ) : (
         <div className="max-w-5xl mx-4 mt-20 sm:mx-6 lg:mx-auto relative py-10 px-7">
           <IKImage
-            urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+            urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
             path="/logo/digitaleyes-cant-find.gif"
             alt="digital eyes cant find"
             className="w-auto h-12 absolute -top-5 mx-auto my-0 left-0 right-0"
@@ -869,7 +869,7 @@ const InfoStep = (props: {
   const imageOutput =
     image && isImageInCache(image) ? (
       <IKImage
-        urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+        urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
         path={getImagePath(image)}
         transformation={[]}
         className="shadow-md w-full h-auto rounded-md"
@@ -1426,7 +1426,7 @@ const LaunchStep = (props: {
   const imageOutput =
     image && isImageInCache(image) ? (
       <IKImage
-        urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+        urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
         path={getImagePath(image)}
         transformation={[]}
         className="shadow-md w-full h-auto rounded-md"

@@ -2,7 +2,7 @@
 import { IKImage } from "imagekitio-react";
 import { useState } from "react";
 
-import { getImagePath, IMAGE_KIT_ENDPOINT_URL, isImageInCache } from "../../constants/images";
+import { getImagePath, IMAGE_KIT_ENDPOINT_OLDURL, isImageInCache } from "../../constants/images";
 
 import "./styles.css";
 
@@ -41,7 +41,7 @@ export const ShimmeringImage: React.FC<ShimmeringImageProps> = ({
     <div data-width={width} data-height={height} className={wrapperClasses}>
       {url && isImageInCache(url) && !cacheFailed ? (
         <IKImage
-          urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+          urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
           path={getImagePath(url)}
           lqip={{ active: true, quality: 5, blur: 20 }}
           alt={name}

@@ -8,7 +8,7 @@ import { LoadingWidget } from "../../components/loadingWidget";
 import { CreationsMasonry } from "../../components/CreationsMasonry";
 import { Page } from "../../components/Page";
 import { VerifeyedBadge } from "../../components/VerifeyedBadge";
-import { getImagePath, IMAGE_KIT_ENDPOINT_URL, isImageInCache } from "../../constants/images";
+import { getImagePath, IMAGE_KIT_ENDPOINT_OLDURL, isImageInCache } from "../../constants/images";
 import Masonry from "react-masonry-css";
 import * as ROUTES from "../../constants/routes";
 import { GET_SOLO_USER_NO_AUTH, GET_SOLO_USER_NO_AUTH_QUERY_PARAM } from "../../constants/urls";
@@ -130,7 +130,7 @@ export const SoloProfileView = () => {
             <div className="overflow-hidden h-72 w-full object-cover mb-24">
               {artist?.banner && isImageInCache(artist?.banner) && !bannerCacheFailed ? (
                 <IKImage
-                  urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+                  urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
                   path={artist?.banner}
                   alt={artist?.username + "banner"}
                   className="w-full"
@@ -149,7 +149,7 @@ export const SoloProfileView = () => {
             <div className="max-w-5xl mx-4 sm:mx-6 lg:mx-auto relative flex justify-center px-7 z-10">
               {artist?.image && isImageInCache(artist?.image) && !imageCacheFailed ? (
                 <IKImage
-                  urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+                  urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
                   path={artist?.image}
                   alt={artist?.username + "banner"}
                   className="w-48 h-auto absolute mx-auto my-0 bottom-0 border-8 border-black rounded-full"

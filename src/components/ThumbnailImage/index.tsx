@@ -1,6 +1,6 @@
 //@ts-ignore
 import { IKImage } from "imagekitio-react";
-import { IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL } from "../../constants/images";
 
 interface ThumbnailImageProps {
   className?: string;
@@ -33,7 +33,7 @@ export const ThumbnailImage = ({
     />
   ) : (
     <IKImage
-      urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+      urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
       path={thumbnail}
       transformation={ikImageTransformation}
       alt={name + "logo"}

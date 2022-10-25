@@ -15,7 +15,7 @@ import { Page } from "../../components/Page";
 import { VerifeyedBadge } from "../../components/VerifeyedBadge";
 import { LAMPORTS_PER_SOL } from "../../constants";
 import { UNVERIFEYED_COLLECTION_OPTION } from "../../constants/collections";
-import { IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL } from "../../constants/images";
 import {
   LocalStorageValueDisplayNSFW,
   LOCAL_STORAGE_KEY_DISPLAY_NSFW_COLLECTIONS,
@@ -534,7 +534,7 @@ export const CollectionsView = () => {
         {!isCollectionWithOffers && (
           <div className="max-w-5xl mx-4 mt-20 sm:mx-6 lg:mx-auto shadow-md relative py-10 px-7">
             <IKImage
-              urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+              urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
               path="/logo/digitaleyes-cant-find.gif"
               alt="digital eyes cant find"
               className="w-auto h-12 absolute -top-5 mx-auto my-0 left-0 right-0"
@@ -602,7 +602,7 @@ export const CollectionsView = () => {
               >
                 <div className="max-w-5xl mx-4 mt-20 sm:mx-6 lg:mx-auto relative py-10 px-7">
                   <IKImage
-                    urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+                    urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
                     path="/logo/digitaleyes-cant-find.gif"
                     alt="digital eyes cant find"
                     className="w-auto h-12 absolute -top-5 mx-auto my-0 left-0 right-0"

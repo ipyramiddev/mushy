@@ -4,7 +4,7 @@ import { ReactComponent as CheckShield } from "../../assets/icons/check-shield.s
 import * as ROUTES from "../../constants/routes";
 // @ts-ignore-next-line
 import { IKImage } from "imagekitio-react";
-import { getImagePath, IMAGE_KIT_ENDPOINT_URL, isImageInCache } from "../../constants/images";
+import { getImagePath, IMAGE_KIT_ENDPOINT_OLDURL, isImageInCache } from "../../constants/images";
 import { Collection } from "../../types";
 import { useTooltipState, Tooltip, TooltipArrow, TooltipReference } from "reakit/Tooltip";
 import { CollectionThumbnail } from "../CollectionThumbnail";

@@ -16,7 +16,7 @@ import bs58 from "bs58";
 import { toast, ToastContainer } from "react-toastify";
 //@ts-ignore
 import { IKImage } from "imagekitio-react";
-import { IMAGE_KIT_ENDPOINT_URL } from "../../constants/images";
+import { IMAGE_KIT_ENDPOINT_OLDURL } from "../../constants/images";
 
 export interface SoloWalletSignerProps {
   data?: any;
@@ -158,7 +158,7 @@ export const SoloWalletSigner: React.FC<SoloWalletSignerProps> = ({
       {!wallet?.publicKey && (
         <div className="max-w-5xl mx-4 mt-20 sm:mx-6 lg:mx-auto relative py-10 px-7">
           <IKImage
-            urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+            urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
             path="/logo/digitaleyes-cant-find.gif"
             alt="digital eyes cant find"
             className="w-auto h-12 absolute -top-5 mx-auto my-0 left-0 right-0"

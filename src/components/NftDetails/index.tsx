@@ -16,7 +16,7 @@ import { useEffect, useState, useContext } from "react";
 import { useInputState } from "../../hooks/useInputState";
 import { useAccountByMint } from "../../hooks/useAccountByMint";
 import { NftRoyaltyCalculator } from "../NftRoyaltyCalculator";
-import { getImagePath, IMAGE_KIT_ENDPOINT_URL, isImageInCache } from "../../constants/images";
+import { getImagePath, IMAGE_KIT_ENDPOINT_OLDURL, isImageInCache } from "../../constants/images";
 import * as ROUTES from "../../constants/routes";
 import { useWallet } from "../../contexts/wallet";
 import { ActiveOffer, Metadata } from "../../types";
@@ -487,7 +487,7 @@ export const NftDetails: React.FC<NftDetailsProps> = ({
   const imageOutput =
     image && isImageInCache(image) && !cacheFailed ? (
       <IKImage
-        urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+        urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
         path={getImagePath(image)}
         transformation={[]}
         className="shadow-md w-full h-auto rounded-md"

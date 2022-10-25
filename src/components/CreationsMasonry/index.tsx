@@ -3,7 +3,7 @@ import { useState } from "react";
 import * as ROUTES from "../../constants/routes";
 // @ts-ignore-next-line
 import { IKImage } from "imagekitio-react";
-import { getImagePath, IMAGE_KIT_ENDPOINT_URL, isImageInCache } from "../../constants/images";
+import { getImagePath, IMAGE_KIT_ENDPOINT_OLDURL, isImageInCache } from "../../constants/images";
 import Masonry from "react-masonry-css";
 
 
@@ -32,7 +32,7 @@ export const CreationsMasonry: React.FC<CreationsMasonryProps> = ({ array }) => 
         >
         {" "}
         {/**<IKImage
-          urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+          urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
           path={item?.image}
           alt="digital eyes cant find"
         />*/}
@@ -56,7 +56,7 @@ export const CreationsMasonry: React.FC<CreationsMasonryProps> = ({ array }) => 
           <div className="mt-1" key={index}>
             {" "}
             <IKImage
-              urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+              urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
               path={item?.image}
               alt="digital eyes cant find"
             />

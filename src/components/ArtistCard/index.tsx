@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { IKImage } from "imagekitio-react";
 import { useState } from "react";
 import * as ROUTES from "../../constants/routes";
-import { getImagePath, IMAGE_KIT_ENDPOINT_URL, isImageInCache } from "../../constants/images";
+import { getImagePath, IMAGE_KIT_ENDPOINT_OLDURL, isImageInCache } from "../../constants/images";
 import { ActiveOffer, ActiveArtist } from "../../types";
 import { getTraitValueByKey, isSolarian, handlerFavorites, itemIsFavorite } from "../../utils";
 import { useTooltipState, Tooltip, TooltipArrow, TooltipReference } from "reakit/Tooltip";
@@ -57,7 +57,7 @@ export const ArtistCard: React.FC<ArtistCardProps> = ({ artist }) => {
       <div className="flex justify-center object-contain m-5 w-1/5">
         {artist?.image && isImageInCache(artist.image) && !cacheFailed ? (
           <IKImage
-            urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
+            urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
             path={getImagePath(artist?.image)}
             transformation={[
               {
