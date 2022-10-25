@@ -1,0 +1,63 @@
+.stepper-profile-container {
+  border: 1px solid #202020;
+}
+
+.stepper-draggable-container {
+  background-color: black;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(255, 255, 255, 0.06) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 400% 400%;
+  animation: stepper-draggable-container-shimmer 1s linear infinite;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+@keyframes stepper-draggable-container-shimmer {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: -135% 0%;
+  }
+}
+
+.outlined-container {
+  transition: all 150ms ease-in-out;
+
+  outline-style: dashed;
+  outline-width: 1px;
+  outline-color: #3c3c3c;
+  outline-offset: 0px;
+}
+
+.outlined-container_hover {
+  outline-offset: -10px;
+  outline-color: #999999;
+}
+
+.stepper-draggable-input {
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.stepper-banner-image {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}

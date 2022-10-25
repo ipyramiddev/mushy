@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* For Firefox */
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Webkit browsers like Safari and Chrome */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  font-family: "hero-new", "sans-serif";
+}
+
+.theme-light {
+  --color-main-primary: white;
+  --color-main-secondary: #010101;
+  --color-main-gray-medium: #eee;
+  --color-main-gray-lighter: #f6f6f6;
+  --color-main-tertiary: rgb(250, 250, 250);
+  --color-blue-primary: #0047ab;
+  --color-blue-secondary: #003176;
+  --color-orange: #ff5c00;
+  --color-slateblue: #6A5ACD;
+  --color-border: transparent;
+  --color-main-bg: #eee;
+}
+
+.theme-dark {
+  --color-main-primary: #010101;
+  --color-main-secondary: white;
+  --color-main-gray-medium: #333333;
+  --color-main-gray-lighter: #3E3E3E;
+  --color-blue-primary: rgb(96, 165, 250);
+  --color-blue-secondary: #003176;
+  --color-orange: #ff5c00;
+  --color-slateblue: #6A5ACD;
+  --color-border: rgb(115, 115, 115);
+  --tw-shadow: 0 0px 0px 1px #fff;
+  --color-main-bg: #222;
+}
+
+body {
+  background-color: var(--color-main-primary);
+  color: var(--color-main-secondary);
+}
+
+.bg-gradient-dark {
+  background: radial-gradient(ellipse at center top, rgba(34,34,34,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -10px; /* gutter size offset */
+  width: auto;
+
+}
+.my-masonry-grid_column {
+  padding-left: 3px; /* gutter size */
+  background-clip: padding-box;
+
+}

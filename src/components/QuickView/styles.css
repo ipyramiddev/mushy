@@ -1,0 +1,51 @@
+.max-width-80 {
+  max-width: 80vw;
+}
+
+.max-height-80 {
+  max-height: 80vh;
+}
+
+.quickview-modal-container {
+  animation: quickview-container-fade-in 100ms forwards ease-in;
+}
+
+@keyframes quickview-container-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.quickview-modal {
+  background: #2f2f2f;
+  animation: quickview-modal-pop-in 150ms forwards ease-in-out;
+}
+
+@keyframes quickview-modal-pop-in {
+  from {
+    scale: 0;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.quickview-main {
+  /* max-height: 50vh; */
+  overflow-y: auto;
+}
+
+.quickview-attributes {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.quickview-attribute-container:not(last-child) {
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 0 0.35rem 0;
+}

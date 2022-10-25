@@ -1,0 +1,13 @@
+.progress-bar-container {
+  top: 5.25rem;
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 100%);
+}
+
+.completed-percentage-span {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  white-space: nowrap;
+}

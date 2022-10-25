@@ -1,0 +1,40 @@
+.image-container {
+  content: "";
+  width: attr(data-width);
+  height: attr(data-height);
+
+  object-fit: contain;
+  object-position: center;
+
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 35%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0) 65%
+  );
+  background-size: 400% 400%;
+  transition: all .25s ease-in-out;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.image-container:not(.loaded) {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.3) 35%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.3) 65%
+  );
+  animation: image-container-shimmer 1s linear infinite;
+}
+
+@keyframes image-container-shimmer {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 135% 0%;
+  }
+}

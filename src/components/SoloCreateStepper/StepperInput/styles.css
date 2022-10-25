@@ -1,0 +1,20 @@
+.stepper-input-label {
+  position: absolute;
+  padding: 0.2rem 0.4rem;
+  z-index: 2;
+  top: 0;
+  left: 1rem;
+  background: transparent;
+  font-size: 0.675rem;
+
+  transform: translate(0, -50%);
+}
+
+.stepper-input {
+  background: transparent;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #3c3c3c;
+
+  transition: all 1s ease-in-out;
+}

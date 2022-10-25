@@ -1,0 +1,9 @@
+export { CollectionsView } from "./collections";
+export { WalletView } from "./wallet";
+export { FaqView } from "./faq";
+export { PressView } from './press';
+export { ItemView } from "./item";
+export { CreateMintView } from "./create-mint";
+export { PresaleView } from "./presale-launchpad";
+export { ArtCreateView } from "./artCreate";
+export { SoloProfileView } from "./solo-profile";

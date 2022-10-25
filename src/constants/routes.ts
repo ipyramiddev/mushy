@@ -1,0 +1,15 @@
+export const HOME = "/";
+export const WALLET = "/wallet";
+export const EXPLORE = "/explore";
+export const FAQ = "/faq";
+export const PRESS = "/press";
+export const ITEM = "/item";
+export const COLLECTIONS = "/collections";
+export const FAVOURITE_LIST = "/favourite-list";
+export const LAUNCHPAD = "/launchpad";
+export const LAUNCHPAD_PRESALE = "/launchpad-presale";
+export const FEEDBACK = "/feedback";
+export const SOLO = "/solo";
+export const SOLO_SETTINGS = "/solo-settings";
+export const SOLOPROFILE = "/solo-profile";
+export const MINT = "/solo-art/create/:step_param?";
