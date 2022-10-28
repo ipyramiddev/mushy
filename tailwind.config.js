@@ -26,7 +26,19 @@ module.exports = {
       colors: {
         primary: colors.sky,
         secondary: colors.pink,
-        gray: colors.trueGray,
+        gray: {
+          DEFAULT: '#737373',
+          50: '#fafafa',
+          100: '#f5f5f5',
+          200: '#e5e5e5',
+          300: '#C5C5C5',
+          400: '#a3a3a3',
+          500: '#737373',
+          600: '#525252',
+          700: '#404040',
+          800: '#262626',
+          900: '#171717',
+        },
         blue: {
           DEFAULT: '#4FBBEB',
           '50': '#DFF3FB',
@@ -40,6 +52,8 @@ module.exports = {
           '800': '#106991',
           '900': '#0B4863'
         },
+        white: colors.white,
+        "header-pink": '#EFDBFF',
         "almost-black": '#010101',
         "modal-black": "rgba(0, 0, 0, 0.75)",
         "dark-footer": '#111111',
@@ -62,6 +76,10 @@ module.exports = {
         "bd-blue-color": '#344E8B',
       }
     },
+    boxShadow: {
+      'header': '0px 1px 0px rgba(0, 0, 0, 0.15)',
+      none: 'none',
+    }
   },
   variants: {
     extend: {

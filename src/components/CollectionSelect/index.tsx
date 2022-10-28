@@ -72,7 +72,7 @@ const CollectionSelect = ({
       margin: "0",
       boxSizing: "border-box",
       // paddingLeft: "0",
-      color: "var(--color-main-secondary)",
+      color: "#C5C5C5",
     }),
     placeholder: (provided: any) => ({
       ...provided,
@@ -81,7 +81,7 @@ const CollectionSelect = ({
       opacity: 0.5,
       position: "absolute",
       fontWeight: "300",
-      color: "var(--color-main-secondary)",
+      color: "#C5C5C5",
     }),
     valueContainer: (provided: any) => ({
       ...provided,
@@ -119,7 +119,7 @@ const CollectionSelect = ({
       margin: "0",
       boxSizing: "border-box",
       paddingRight: "0",
-      color: "#fff",
+      color: "#C5C5C5",
     }),
     placeholder: (provided: any) => ({
       ...provided,
@@ -129,7 +129,7 @@ const CollectionSelect = ({
       position: "absolute",
       fontWeight: "300",
       marginTop: "1px",
-      color: "#fff",
+      color: "#C5C5C5",
     }),
     valueContainer: (provided: any) => ({
       ...provided,

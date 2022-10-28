@@ -52,23 +52,23 @@ export function AppBar() {
   const { collections, topCollections } = useCollections();
 
   return (
-    <Popover className="bg-almost-black sticky top-0 z-50">
+    <Popover className="bg-header-pink sticky top-0 z-50">
       {({ open, close }) => (
         <>
-          <div className="flex justify-between items-center px-4 sm:px-6 md:justify-start md:space-x-10 mx-auto shadow">
+          <div className="flex justify-between items-center px-4 sm:px-6 md:justify-start md:space-x-10 mx-auto shadow-header">
             <div className="flex justify-start md:flex-auto md:h-20 h-12 xl:ml-10">
               <Link to={ROUTES.HOME} onClick={() => close()} className="flex items-center">
                 <IKImage
                   urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
                   path="/logo/mushy.svg"
                   alt="mushy logo"
-                  className="w-auto h-6 md:h-7.5"
+                  className="w-auto h-11 md:h-7.5"
                 />
               </Link>
             </div>
 
             <div className="flex-auto flex justify-center">
-              <div className="text-sm md:text-base w-full lg:w-64 xl:w-80 bg-gray-900 mx-8 lg:mx-auto rounded-full">
+              <div className="text-sm md:text-base w-full lg:w-64 xl:w-80 bg-white mx-8 lg:mx-auto rounded-full border border-gray-300">
                 <CollectionSelect
                   collections={collections}
                   topCollections={topCollections}
