@@ -54,6 +54,7 @@ module.exports = {
         },
         white: colors.white,
         "header-pink": '#EFDBFF',
+        "header-purple": '#5E25D9',
         "almost-black": '#010101',
         "modal-black": "rgba(0, 0, 0, 0.75)",
         "dark-footer": '#111111',
