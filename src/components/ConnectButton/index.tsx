@@ -5,6 +5,8 @@ import { LABELS } from "../../constants";
 import { useWallet } from "../../contexts/wallet";
 import { classNames } from "../../utils/utils";
 
+import { ReactComponent as WalletIcon } from "../../assets/icons/wallet.svg";
+
 export interface ConnectButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   allowWalletChange?: boolean;
   size?: "lg";
@@ -13,7 +15,7 @@ export interface ConnectButtonProps extends React.ButtonHTMLAttributes<HTMLButto
 export const ConnectButton = (props: ConnectButtonProps) => {
   const { connected, connect, select, provider } = useWallet();
   const { onClick, children, disabled, allowWalletChange } = props;
-
+  
   // only show if wallet selected or user connected
 
   if (!provider || !allowWalletChange) {
@@ -21,12 +23,13 @@ export const ConnectButton = (props: ConnectButtonProps) => {
       <button
         type="button"
         className={classNames(
-          "btn focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 duration-150 ease-in"
+          "bg-transparent hover:bg-header-purple text-header-purple font-semibold hover:text-white py-2 px-4 border border-header-purple hover:border-transparent rounded-full flex items-center"
         )}
         onClick={connected ? onClick : connect}
         disabled={connected && disabled}
       >
-        {connected ? children : LABELS.CONNECT_LABEL}
+        <span><WalletIcon className="mr-1 h-5 w-5" /></span>
+        <span>{connected ? children : LABELS.CONNECT_LABEL}</span>
       </button>
     );
   }
