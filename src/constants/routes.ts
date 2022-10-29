@@ -13,3 +13,4 @@ export const SOLO = "/solo";
 export const SOLO_SETTINGS = "/solo-settings";
 export const SOLOPROFILE = "/solo-profile";
 export const MINT = "/solo-art/create/:step_param?";
+export const PRODUCTS = "/products";

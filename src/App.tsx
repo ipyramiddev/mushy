@@ -28,6 +28,7 @@ import { ExploreView } from "./views/explore";
 import { SoloCreationContextProvider } from "./contexts/solo-creation";
 import { ArtCreateView } from "./views/artCreate";
 import { AudioContextProvider } from "./contexts/audio";
+import { ProductsView } from "./views/products";
 
 function App() {
   const setTheme = (themeName: string) => {
@@ -78,8 +79,11 @@ function App() {
                           />
                           <Route exact path={ROUTES.FAVOURITE_LIST} component={FavouriteListView} />
                           <Route exact path={ROUTES.FEEDBACK} children={<FeedbackView />} />
-                          <Route component={NotFoundView} />
                           <Route exact path={`${ROUTES.ITEM}/:mint`} children={<ItemView />} />
+                          {/* console.log({ROUTES.PRODUCTS}); */}
+                          <Route exact path={ROUTES.PRODUCTS} component={ProductsView} />
+
+                          <Route component={NotFoundView} />
                         </Switch>
                       </Layout>
                     </AccountsProvider>
