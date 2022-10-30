@@ -7,6 +7,7 @@
     "@craco/craco": "^6.1.2",
     "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
+    "@fontsource/montserrat": "^4.5.13",
     "@google/model-viewer": "^1.8.0",
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.1",
