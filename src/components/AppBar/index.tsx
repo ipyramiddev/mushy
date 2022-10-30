@@ -80,10 +80,10 @@ export function AppBar() {
                         </div>
 
                         {/*
-            <button onClick={toggleTheme}>
-              <SunIcon className="w-5 h-5 text-white" />
-            </button>
-            */}
+                        <button onClick={toggleTheme}>
+                            <SunIcon className="w-5 h-5 text-white" />
+                        </button>
+                        */}
 
                         <div className="-mr-2 -my-2 lg:hidden">
                             <Popover.Button className="bg-almost-black p-2 inline-flex items-center justify-center text-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
@@ -129,11 +129,11 @@ export function AppBar() {
                             </Link>
 
                             {/* <Link
-                to={ROUTES.FEEDBACK}
-                className="font-light text-white hover:text-gray-500 uppercase"
-              >
-                <FeedbackLogo />
-              </Link> */}
+                                to={ROUTES.FEEDBACK}
+                                className="font-light text-white hover:text-gray-500 uppercase"
+                            >
+                                <FeedbackLogo />
+                            </Link> */}
                         </Popover.Group>
 
                         <div className="hidden lg:flex items-center justify-end">
