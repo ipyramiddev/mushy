@@ -1,10 +1,10 @@
 
 import { Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import { ReactComponent as Category } from "../../assets/icons/category.svg";
+import { ReactComponent as DollarIcon } from "../../assets/icons/dollar.svg";
 
 import { Fragment } from 'react';
-import "./style.css";
+// import style from "./style.css";
 
 // const solutions = [
 //     {
@@ -36,8 +36,8 @@ export const Price = () => {
                         <Popover.Button
                             className={`${open ? '' : 'text-opacity-90'} group inline-flex items-center bg-orange-700 px-5 py-1 text-base font-medium text-header-purple hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 border`}
                         >
-                            <Category />
-                            <span>Price</span>
+                            <DollarIcon />
+                            <span className='ml-2'>Price</span>
                             <ChevronDownIcon
                                 className={`${open ? '' : 'text-opacity-70'}
                   ml-2 h-5 w-5 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
