@@ -1,7 +1,7 @@
 .de-animated-underline {
-  background-image: linear-gradient(90deg, #2ee9a8 25%, #cf35ec 50%, #2ee9a8 75%);
+  background-image: linear-gradient(90deg, #C5C5C5 25%, #C5C5C5 50%, #C5C5C5 75%);
   background-size: 400% 400%;
-  animation: shimmer 8s linear infinite;
+  /* animation: shimmer 8s linear infinite; */
   max-height: 2px;
 }
 
