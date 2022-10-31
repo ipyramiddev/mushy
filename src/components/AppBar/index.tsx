@@ -21,6 +21,9 @@ import { Settings } from "../Settings";
 import { DE_DISCORD, DE_TWITTER } from "../../utils/DeSocials";
 import { Divider } from "../Divider";
 import { useLocation } from "react-router-dom";
+import { ReactComponent as WalletIcon } from "../../assets/icons/wallet.svg";
+import { ReactComponent as CirclePlusIcon } from "../../assets/icons/circle-plus.svg";
+
 
 export function AppBar() {
     const [checked, setChecked] = useState(false);
@@ -55,8 +58,9 @@ export function AppBar() {
         <Popover className="bg-header-pink sticky top-0 z-50">
             {({ open, close }) => (
                 <>
-                    <div className="flex justify-between items-center px-4 sm:px-10 md:justify-start md:space-x-10 mx-auto shadow-header">
-                        <div className="flex justify-start md:flex-auto md:h-20 h-12 xl:ml-10">
+                    <div className="w-full md:px-32 flex items-center">
+                        {/* <div className="w-full flex justify-between items-center px-4 sm:px-6 md:justify-start md:space-x-10 mx-auto shadow-header"> */}
+                        <div className="flex justify-start md:flex-auto md:h-20 h-12">
                             <Link to={ROUTES.HOME} onClick={() => close()} className="flex items-center">
                                 <IKImage
                                     urlEndpoint={IMAGE_KIT_ENDPOINT_URL}
@@ -67,8 +71,8 @@ export function AppBar() {
                             </Link>
                         </div>
 
-                        <div className="flex-auto flex justify-center">
-                            <div className="text-sm md:text-base w-full lg:w-64 xl:w-80 bg-white mx-8 lg:mx-auto rounded-full border border-gray-300">
+                        <div className="hidden lg:flex items-center justify-end">
+                            <div className="text-sm md:text-base w-full lg:w-64 xl:w-80 bg-white mx-8 lg:mx-auto rounded-full border border-gray-300 md:mr-8">
                                 <CollectionSelect
                                     collections={collections}
                                     topCollections={topCollections}
@@ -77,211 +81,43 @@ export function AppBar() {
                                     darkMode={true}
                                 />
                             </div>
+                            {/* <WalletConnector /> */}
+                            <div className="md:mr-4">
+                                <ConnectWallet />
+                            </div>
                         </div>
-
-                        {/*
-                        <button onClick={toggleTheme}>
-                            <SunIcon className="w-5 h-5 text-white" />
-                        </button>
-                        */}
-
-                        <div className="-mr-2 -my-2 lg:hidden">
-                            <Popover.Button className="bg-almost-black p-2 inline-flex items-center justify-center text-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
-                                <span className="sr-only">Open menu</span>
-                                <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                            </Popover.Button>
-                        </div>
-                        <Popover.Group as="nav" className="hidden lg:flex space-x-6 items-center">
-                            <Link
-                                to={ROUTES.SOLO}
-                                onClick={() => close()}
-                                className="font-light text-white hover:text-gray-500 uppercase"
-                            >
-                                solo
-                            </Link>
-                            <Link
-                                to={ROUTES.EXPLORE}
-                                onClick={() => close()}
-                                className="font-light text-white hover:text-gray-500 uppercase"
-                            >
-                                Explore
-                            </Link>
-                            <Link
-                                to={ROUTES.WALLET}
-                                onClick={() => close()}
-                                className="font-light text-white hover:text-gray-500 uppercase"
-                            >
-                                Sell
-                            </Link>
-                            <Link
-                                to={ROUTES.FAQ}
-                                onClick={() => close()}
-                                className="font-light text-white hover:text-gray-500 uppercase"
-                            >
-                                FAQ
-                            </Link>
-
-                            <Link
-                                to={ROUTES.FAVOURITE_LIST}
-                                className="font-light text-white hover:text-gray-500 uppercase"
-                            >
-                                Favorites
-                            </Link>
-
-                            {/* <Link
-                                to={ROUTES.FEEDBACK}
-                                className="font-light text-white hover:text-gray-500 uppercase"
-                            >
-                                <FeedbackLogo />
-                            </Link> */}
-                        </Popover.Group>
-
-                        <div className="hidden lg:flex items-center justify-end">
-                            <WalletConnector />
+                        <div>
+                            <AddProduct />
                         </div>
                     </div>
-
-                    <Transition
-                        show={open}
-                        as={Fragment}
-                        enter="duration-200 ease-out"
-                        enterFrom="opacity-0 scale-95"
-                        enterTo="opacity-100 scale-100"
-                        leave="duration-100 ease-in"
-                        leaveFrom="opacity-100 scale-100"
-                        leaveTo="opacity-0 scale-95"
-                    >
-                        <Popover.Panel
-                            focus
-                            static
-                            className="absolute top-0 inset-x-0 z-10 transition transform origin-top-right lg:hidden"
-                        >
-                            <div className="ring-1 ring-white ring-opacity-5 p-2 bg-almost-black divide-y-2 divide-gray-50">
-                                <div className="pt-5 pb-6 px-5">
-                                    <div className="flex items-center justify-between">
-                                        <div>
-                                            <Link to={ROUTES.HOME} onClick={() => close()}>
-                                                <IKImage
-                                                    urlEndpoint={IMAGE_KIT_ENDPOINT_OLDURL}
-                                                    path="/logo/digitaleyes.svg"
-                                                    alt="digital eyes logo"
-                                                    className="h-12 w-auto"
-                                                />
-                                            </Link>
-                                        </div>
-                                        <div className="-mr-2">
-                                            <Popover.Button className="bg-almost-black border border-white p-2 inline-flex items-center justify-center text-white hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
-                                                <span className="sr-only">Close menu</span>
-                                                <XIcon className="h-6 w-6" aria-hidden="true" />
-                                            </Popover.Button>
-                                        </div>
-                                    </div>
-                                    <div className="mt-6">
-                                        <nav className="grid grid-cols-1 gap-7">
-                                            <Link
-                                                to={ROUTES.HOME}
-                                                onClick={() => close()}
-                                                className="-m-3 p-3 flex items-center"
-                                            >
-                                                <div className="ml-3 font-light text-white uppercase hover:text-gray-500 text-xl">
-                                                    Home
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                to={ROUTES.SOLO}
-                                                onClick={() => close()}
-                                                className="-m-3 p-3 flex items-center"
-                                            >
-                                                <div className="ml-3 font-light text-white uppercase hover:text-gray-500 text-xl">
-                                                    solo
-                                                </div>
-                                            </Link>
-
-                                            <Link
-                                                to={ROUTES.EXPLORE}
-                                                onClick={() => close()}
-                                                className="-m-3 p-3 flex items-center"
-                                            >
-                                                <div className="ml-3 font-light text-white uppercase hover:text-gray-500 text-xl">
-                                                    Explore
-                                                </div>
-                                            </Link>
-
-                                            <Link
-                                                to={ROUTES.WALLET}
-                                                onClick={() => close()}
-                                                className="-m-3 p-3 flex items-center"
-                                            >
-                                                <div className="ml-3 font-light text-white uppercase hover:text-gray-500 text-xl">
-                                                    Sell
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                to={ROUTES.FAQ}
-                                                onClick={() => close()}
-                                                className="-m-3 p-3 flex items-center"
-                                            >
-                                                <div className="ml-3 font-light text-white uppercase hover:text-gray-500 text-xl">
-                                                    FAQ
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                to={ROUTES.FAVOURITE_LIST}
-                                                onClick={() => close()}
-                                                className="ml-3 font-light text-white uppercase hover:text-gray-500 text-xl"
-                                            >
-                                                Favorites
-                                            </Link>
-                                            <Link
-                                                to={ROUTES.LAUNCHPAD}
-                                                onClick={() => close()}
-                                                className="ml-3 font-light text-white uppercase hover:text-gray-500 text-xl"
-                                            >
-                                                LAUNCHPAD
-                                            </Link>
-                                            {/* <Link
-                        to={ROUTES.FEEDBACK}
-                        className="ml-3 font-light text-white uppercase hover:text-gray-500 text-xl"
-                      >
-                        FEEDBACK
-                      </Link> */}
-                                        </nav>
-                                    </div>
-                                </div>
-                                <div className="py-4 px-5">
-                                    <div className="flex items-center justify-end">
-                                        <WalletConnector />
-                                    </div>
-
-                                    <div className="mt-4 mx-10 flex justify-center space-x-12">
-                                        <a
-                                            href={DE_TWITTER}
-                                            target="_blank"
-                                            className="text-white hover:text-gray-500"
-                                            rel="noreferrer"
-                                        >
-                                            <TwitterLogo className="h-8 w-8" />
-                                        </a>
-                                        <a
-                                            href={DE_DISCORD}
-                                            target="_blank"
-                                            className="text-white hover:text-gray-500"
-                                            rel="noreferrer"
-                                        >
-                                            <DiscordLogo className="h-8 w-8" />
-                                        </a>
-                                        {/* <a href="#" className="text-white hover:text-gray-500">
-                      <TelegramLogo className="h-8 w-8" />
-                    </a> */}
-                                    </div>
-                                </div>
-                            </div>
-                        </Popover.Panel>
-                    </Transition>
                     <Divider />
                 </>
             )}
         </Popover>
+    );
+}
+
+const ConnectWallet = () => {
+    return (
+        <button
+            type="button" 
+            className= "bg-transparent hover:bg-header-purple text-header-purple font-semibold hover:text-white py-2 px-4 border border-header-purple hover:border-transparent rounded-full flex items-center"
+        >
+            <span><WalletIcon className="mr-1 h-5 w-5" /></span>
+            <span>Connect Wallet</span>
+        </button>
+    );
+}
+
+const AddProduct = () => {
+    return (
+        <button
+            type="button" 
+            className= "hover:bg-white bg-gradient-to-r from-purple-200 to-purple-gradient-2 text-header-purple font-semibold hover:text-white py-2 px-4 border border-header-purple hover:border-transparent rounded-full flex items-center"
+        >
+            <span className="hover:text-header-purple"><CirclePlusIcon className="mr-1" /></span>
+            <span className="font-thin text-white hover:text-header-purple">List a Product</span>
+        </button>
     );
 }
 

@@ -6,11 +6,10 @@ import { ItemCondition } from "../../components/ItemCondition";
 import { Location } from "../../components/Location";
 import { SortBy } from "../../components/SortBy";
 
-
 export const FilterBar = () => {
     return (
-        <div className="bg-header-pink flex justify-between items-center h-16 w-full">
-            <Popover.Group as="nav" className="hidden lg:flex space-x-3 items-center p-10">
+        <div className="bg-header-pink flex justify-between items-center h-16 w-full md:px-32">
+            <Popover.Group as="nav" className="hidden lg:flex space-x-3 items-center">
                 <div className="font-light">
                     <Filters />
                 </div>
@@ -27,7 +26,7 @@ export const FilterBar = () => {
                     <Location />
                 </div>
             </Popover.Group>
-            <div className="p-10">
+            <div>
                 <SortBy />
             </div>
         </div>
