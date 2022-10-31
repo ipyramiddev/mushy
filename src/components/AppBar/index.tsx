@@ -82,7 +82,7 @@ export function AppBar() {
                                 />
                             </div>
                             {/* <WalletConnector /> */}
-                            <div className="md:mr-4">
+                            <div className="md:mr-4 md:ml-8">
                                 <ConnectWallet />
                             </div>
                         </div>

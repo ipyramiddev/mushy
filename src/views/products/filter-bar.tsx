@@ -9,7 +9,7 @@ import { Divider } from "../../components/Divider";
 
 export const FilterBar = () => {
     return (
-        <div className="w-full fixed top-filter-position">
+        <div className="w-full fixed top-20">
             <div className="bg-header-pink flex justify-between items-center h-16 w-full md:px-32">
                 <Popover.Group as="nav" className="hidden lg:flex space-x-3 items-center">
                     <div className="font-light">
