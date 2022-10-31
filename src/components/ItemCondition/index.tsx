@@ -4,8 +4,6 @@ import { ChevronDownIcon } from "@heroicons/react/solid";
 import { ReactComponent as StarIcon } from "../../assets/icons/star.svg";
 
 import { Fragment } from 'react';
-import "./style.css";
-
 // const solutions = [
 //     {
 //         name: 'Insights',
@@ -34,13 +32,12 @@ export const ItemCondition = () => {
                 {({ open }) => (
                     <>
                         <Popover.Button
-                            className={`${open ? '' : 'text-opacity-90'} group inline-flex items-center bg-orange-700 px-5 py-1 text-base font-medium text-header-purple hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 border`}
+                            className={`${open ? '' : 'text-opacity-90'} group inline-flex items-center bg-filter-button-purple px-5 py-1 text-base font-medium text-header-purple hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 rounded-full hover:bg-filter-button-hover-purple`}
                         >
                             <StarIcon />
                             <span className='ml-2'>Item Condition</span>
                             <ChevronDownIcon
-                                className={`${open ? '' : 'text-opacity-70'}
-                  ml-2 h-5 w-5 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
+                                className={`${open ? '' : 'text-opacity-70'} ml-2 h-5 w-5 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
                                 aria-hidden="true"
                             />
 
