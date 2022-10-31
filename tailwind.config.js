@@ -57,6 +57,7 @@ module.exports = {
           '200': '#5E25D9', //sort by distance text color + list product button gradient first stop
           'gradient-2': '#A447FF', //list product button gradient second stop
           'product-purple': '#4703A6', // text color of product name in product div
+          'divide-purple': '#E3C0FF', //divider color of filter popup
 
         },
         white: colors.white,
