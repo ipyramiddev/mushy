@@ -55,7 +55,7 @@ export function AppBar() {
     const { collections, topCollections } = useCollections();
 
     return (
-        <Popover className="bg-header-pink sticky top-0 z-50">
+        <Popover className="bg-header-pink fixed top-0 z-50 w-full">
             {({ open, close }) => (
                 <>
                     <div className="w-full md:px-32 flex items-center">
