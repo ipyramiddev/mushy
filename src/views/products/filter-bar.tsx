@@ -9,8 +9,8 @@ import { SortBy } from "../../components/SortBy";
 
 export const FilterBar = () => {
     return (
-        <div className="bg-header-pink flex justify-between items-center px-4 sm:px-6 md:justify-start md:space-x-10 mx-auto shadow-header h-60px" style={{ height: "60px" }}>
-            <Popover.Group as="nav" className="hidden lg:flex space-x-3 items-center pl-10">
+        <div className="bg-header-pink flex justify-between items-center h-16 w-full">
+            <Popover.Group as="nav" className="hidden lg:flex space-x-3 items-center p-10">
                 <div className="font-light">
                     <Filters />
                 </div>
@@ -27,7 +27,7 @@ export const FilterBar = () => {
                     <Location />
                 </div>
             </Popover.Group>
-            <div className="" style={{ marginLeft: "50%" }}>
+            <div className="p-10">
                 <SortBy />
             </div>
         </div>

@@ -55,7 +55,7 @@ export function AppBar() {
         <Popover className="bg-header-pink sticky top-0 z-50">
             {({ open, close }) => (
                 <>
-                    <div className="flex justify-between items-center px-4 sm:px-6 md:justify-start md:space-x-10 mx-auto shadow-header">
+                    <div className="flex justify-between items-center px-4 sm:px-10 md:justify-start md:space-x-10 mx-auto shadow-header">
                         <div className="flex justify-start md:flex-auto md:h-20 h-12 xl:ml-10">
                             <Link to={ROUTES.HOME} onClick={() => close()} className="flex items-center">
                                 <IKImage
