@@ -1,6 +1,9 @@
 
 import { Popover, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
+import { ChevronRightIcon } from "@heroicons/react/solid";
+import { ReactComponent as CategoryIcon } from '../../assets/icons/category.svg';
+import { ReactComponent as LocationIcon } from '../../assets/icons/location.svg';
 
 // const solutions = [
 //     {
@@ -43,46 +46,147 @@ export const Filters = () => {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 translate-y-1"
                         >
-                            <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl">
-                                <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                                    <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-                                        {/* {solutions.map((item) => (
-                                            <a
-                                                key={item.name}
-                                                href={item.href}
-                                                className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                                            >
-                                                <div className="flex h-10 w-10 shrink-0 items-center justify-center text-white sm:h-12 sm:w-12">
-                                                    <item.icon aria-hidden="true" />
+                                <Popover.Panel className="absolute left-0 z-10 mt-1 w-screen max-w-sm -translate-x-0 transform px-4 sm:px-0 lg:max-w-xs">
+                                    <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                                        {/* <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
+                                            {solutions.map((item) => (
+                                                <a
+                                                    key={item.name}
+                                                    href={item.href}
+                                                    className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                                                >
+                                                    <div className="flex h-10 w-10 shrink-0 items-center justify-center text-white sm:h-12 sm:w-12">
+                                                        <item.icon aria-hidden="true" />
+                                                    </div>
+                                                    <div className="ml-4">
+                                                        <p className="text-sm font-medium text-gray-900">
+                                                            {item.name}
+                                                        </p>
+                                                        <p className="text-sm text-gray-500">
+                                                            {item.description}
+                                                        </p>
+                                                    </div>
+                                                </a>
+                                            ))}
+                                        </div> */}
+                                        {/* category filter */}
+                                        <div className="divide-y-2 divide-purple-divide-purple">
+                                            <div className='grid grid-cols-1 divide-y divide-purple-divide-purple bg-filter-button-purple p-4'>
+                                                <div className="bg-filter-button-purple">
+                                                    <div
+                                                        className="flow-root rounded-md px-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                                                    >
+                                                        <span className="flex items-center">
+                                                            <span className="text-sm font-medium text-purple-100">
+                                                                Category
+                                                            </span>
+                                                        </span>
+                                                        <span className="block flex items-center justify-between text-sm text-gray-500 py-4">
+                                                            <div className="flex items-center">
+                                                                <CategoryIcon />
+                                                                <span className="ml-2 text-header-purple font-semi-bold">All Categories</span>
+                                                            </div>
+                                                            <ChevronRightIcon className="w-5 text-header-purple"/>
+                                                        </span>
+                                                    </div>
                                                 </div>
-                                                <div className="ml-4">
-                                                    <p className="text-sm font-medium text-gray-900">
-                                                        {item.name}
-                                                    </p>
-                                                    <p className="text-sm text-gray-500">
-                                                        {item.description}
-                                                    </p>
+                                                {/* price filter */}
+                                                <div className="bg-filter-button-purple">
+                                                    <div
+                                                        className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                                                    >
+                                                        <div className="">
+                                                            <div className="text-sm font-medium text-purple-100">
+                                                                Price range
+                                                            </div>
+                                                        </div>
+                                                        <div className="text-sm font-medium text-purple-100 pb-1">
+                                                            From
+                                                        </div>
+                                                        <div className="flex items-center justify-between mb-2">
+                                                            <input type="text" className="bg-white border border-purple-100 text-purple-900 text-sm focus:ring-purple-900 focus:border-purple-900 focus:ring-purple-900 block w-5/12 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="0" required />
+                                                            <input type="text" className="bg-white border border-purple-100 text-purple-900 text-sm focus:ring-purple-900 focus:border-purple-900 focus:ring-purple-900 block w-5/12 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="No limit" required />
+
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </a>
-                                        ))} */}
+                                                {/* item condition filter */}
+                                                <div className="bg-filter-button-purple">
+                                                    <div
+                                                        className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                                                    >
+                                                        <span className="flex items-center">
+                                                            <span className="text-sm font-medium text-purple-100">
+                                                                Item Condition
+                                                            </span>
+                                                        </span>
+                                                        <span className="block flex items-center justify-between text-sm text-gray-500 py-4">
+                                                            <div className="flex items-center">
+                                                                <span className="ml-10 text-header-purple font-semi-bold">Any item condition</span>
+                                                            </div>
+                                                            <ChevronRightIcon className="w-5 text-header-purple"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                {/* location condition filter */}
+                                                <div className="bg-filter-button-purple">
+                                                    <div
+                                                        className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                                                    >
+                                                        <span className="flex items-center">
+                                                            <span className="text-sm font-medium text-purple-100">
+                                                                Location
+                                                            </span>
+                                                        </span>
+                                                        <span className="block flex items-center justify-between text-sm text-gray-500 py-4">
+                                                            <div className="flex items-center">
+                                                                <LocationIcon />
+                                                                <span className="ml-2 text-header-purple font-semi-bold">UK, London</span>
+                                                            </div>
+                                                            <ChevronRightIcon className="w-5 text-header-purple"/>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                {/* time of listing  */}
+                                                <div className="bg-filter-button-purple">
+                                                    <div
+                                                        className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                                                    >
+                                                        <span className="flex items-center">
+                                                            <span className="text-sm font-medium text-purple-100">
+                                                                Time of listing
+                                                            </span>
+                                                        </span>
+                                                        <span className="block text-sm text-gray-500 py-4">
+                                                            <div className="flex items-center justify-between px-2">
+                                                                <div>
+                                                                    <div className="text-2xl font-normal text-purple-100 text-center">24</div>
+                                                                    <div className="text-purple-100">Hours</div>
+                                                                </div>
+                                                                <div>
+                                                                    <div className="text-2xl font-normal text-purple-100 text-center">7</div>
+                                                                    <div className="text-purple-100">Days</div>
+                                                                </div>
+                                                                <div>
+                                                                    <div className="text-2xl font-normal text-purple-100 text-center">30</div>
+                                                                    <div className="text-purple-100">Days</div>
+                                                                </div>
+                                                            </div>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                {/* blank */}
+                                                <div className="bg-filter-button-purple py-12"></div>
+                                            </div>
+                                            <div className="bg-filter-button-purple py-2">
+                                                <div className='text-right pr-4'>
+                                                    <button className="text-header-purple px-3 py-1">Cancel</button>
+                                                    <button className="text-white bg-header-purple px-3 py-1 rounded-full">Apply</button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="bg-gray-50 p-4">
-                                        <a
-                                            href="##"
-                                            className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                                        >
-                                            <span className="flex items-center">
-                                                <span className="text-sm font-medium text-gray-900">
-                                                    Documentation
-                                                </span>
-                                            </span>
-                                            <span className="block text-sm text-gray-500">
-                                                Start integrating products and tools
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </Popover.Panel>
+                                </Popover.Panel>
                         </Transition>
                     </>
                 )}
