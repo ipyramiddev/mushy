@@ -52,6 +52,13 @@ module.exports = {
           '800': '#106991',
           '900': '#0B4863'
         },
+        purple: {
+          '100': '#C883FF', //sort by text color
+          '200': '#5E25D9', //sort by distance text color + list product button gradient first stop
+          'gradient-2': '#A447FF', //list product button gradient second stop
+          'product-purple': '#4703A6', // text color of product name in product div
+
+        },
         white: colors.white,
         "header-pink": '#EFDBFF',
         "header-purple": '#5E25D9',
