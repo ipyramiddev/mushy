@@ -29,6 +29,7 @@ import { SoloCreationContextProvider } from "./contexts/solo-creation";
 import { ArtCreateView } from "./views/artCreate";
 import { AudioContextProvider } from "./contexts/audio";
 import { ProductsView } from "./views/products";
+import "@fontsource/montserrat";
 
 function App() {
   const setTheme = (themeName: string) => {
