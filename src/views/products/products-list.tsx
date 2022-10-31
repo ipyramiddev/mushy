@@ -48,7 +48,7 @@ const productsMock = [
 export const ProductsList = () => {
     return (
         <div>
-            <div className="w-full mt-36 md:px-32 md:pt-6 bg-header-pink md:pb-12">
+            <div className="w-full md:mt-36 md:px-32 md:pt-6 bg-header-pink md:pb-12">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-8">
                     {productsMock.map((item)=>(
                         <div className="bg-white border rounded-xl">
