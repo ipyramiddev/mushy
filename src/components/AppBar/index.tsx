@@ -23,6 +23,7 @@ import { Divider } from "../Divider";
 import { useLocation } from "react-router-dom";
 import { ReactComponent as WalletIcon } from "../../assets/icons/wallet.svg";
 import { ReactComponent as CirclePlusIcon } from "../../assets/icons/circle-plus.svg";
+import {ReactComponent as MenuCollapseIcon} from "../../assets/icons/menu.svg";
 
 
 export function AppBar() {
@@ -71,8 +72,8 @@ export function AppBar() {
                             </Link>
                         </div>
 
-                        <div className="hidden lg:flex items-center justify-end">
-                            <div className="text-sm md:text-base w-full lg:w-64 xl:w-80 bg-white mx-8 lg:mx-auto rounded-full border border-gray-300 md:mr-8">
+                        <div className="flex items-center justify-end">
+                            <div className="text-sm md:text-base w-44 md:w-52 lg:w-64 xl:w-80 bg-white mx-8 lg:mx-auto rounded-full border border-gray-300 md:mr-8">
                                 <CollectionSelect
                                     collections={collections}
                                     topCollections={topCollections}
@@ -82,12 +83,15 @@ export function AppBar() {
                                 />
                             </div>
                             {/* <WalletConnector /> */}
-                            <div className="md:mr-4 md:ml-8">
+                            <div className="hidden lg:block mr-1 ml-2 xl:mr-4 xl:ml-8">
                                 <ConnectWallet />
                             </div>
-                        </div>
-                        <div>
-                            <AddProduct />
+                            <div className="hidden lg:block">
+                                <AddProduct />
+                            </div>
+                            <div className="text-header-purple hover:text-white lg:hidden">
+                                <MenuCollapseIcon />
+                            </div>                        
                         </div>
                     </div>
                     <Divider />
