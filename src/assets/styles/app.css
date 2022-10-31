@@ -1,6 +1,6 @@
 /* tailwind apply */
 .btn {
-  @apply py-4 px-8 font-bold bg-blue-500 hover:bg-blue-700 text-white rounded-md sm:text-sm uppercase transition-all;
+  /* @apply py-4 px-8 font-bold bg-blue-500 hover:bg-blue-700 text-white rounded-md sm:text-sm uppercase transition-all; */
 }
 
 .btn:disabled,
@@ -78,4 +78,8 @@ model-viewer {
 
 .lazyload-wrapper {
   @apply flex flex-col justify-between h-full;
+}
+
+#root {
+  font-family: "Montserrat";
 }
