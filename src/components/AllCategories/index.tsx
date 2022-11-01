@@ -2,6 +2,7 @@
 import { Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { ReactComponent as CategoryIcon } from "../../assets/icons/category.svg";
+import {ReactComponent as LeftArrowIcon} from "../../assets/icons/left-arrow.svg";
 
 import { Fragment } from 'react';
 // const solutions = [
@@ -52,7 +53,7 @@ export const AllCategories = () => {
                             leaveFrom="opacity-100 translate-y-0"
                             leaveTo="opacity-0 translate-y-1"
                         >
-                            <Popover.Panel className="absolute left-1/2 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform px-4 sm:px-0 lg:max-w-3xl">
+                            <Popover.Panel className="absolute left-0 z-10 mt-1 w-screen max-w-sm -translate-x-0 transform px-4 sm:px-0 lg:max-w-xs">
                                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                                     <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
                                         {/* {solutions.map((item) => (
@@ -75,20 +76,31 @@ export const AllCategories = () => {
                                             </a>
                                         ))} */}
                                     </div>
-                                    <div className="bg-gray-50 p-4">
-                                        <a
-                                            href="##"
-                                            className="flow-root rounded-md px-2 py-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                                        >
-                                            <span className="flex items-center">
-                                                <span className="text-sm font-medium text-gray-900">
-                                                    Documentation
+                                    <div className='grid grid-cols-1 divide-y divide-purple-divide-purple bg-filter-button-purple p-4'>
+                                        <div className="bg-filter-button-purple">
+                                            <div
+                                                className="flow-root rounded-md flex items-center px-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                                            >   
+                                                <div>
+                                                    <LeftArrowIcon className='w-4 text-header-purple font-black'/>
+                                                </div>
+                                                <span className="block text-sm text-gray-500 py-4">
+                                                    <span className="ml-2 text-header-purple font-semi-bold justify-items-center">All Categories</span>
                                                 </span>
-                                            </span>
-                                            <span className="block text-sm text-gray-500">
-                                                Start integrating products and tools
-                                            </span>
-                                        </a>
+                                            </div>
+                                        </div>
+
+                                        <div className="bg-filter-button-purple">
+                                            <div
+                                                className="flow-root rounded-md px-2 transition duration-150 ease-in-out hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                                            >
+                                                <span className="block flex items-center text-sm text-gray-500 py-4">
+                                                    <CategoryIcon />
+                                                    <span className="ml-2 text-header-purple font-semi-bold">All Categories</span>
+                                                </span>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </Popover.Panel>
